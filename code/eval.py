@@ -52,7 +52,7 @@ if __name__ == '__main__':
     val_loader.num_workers = 12
 
     # load pre-trained model
-    ckpt = torch.load(os.path.join('../trained_models', opt.dataset, opt.pre_trained_model), map_location='cpu')
+    ckpt = torch.load(os.path.join('./trained_models', opt.dataset, opt.pre_trained_model), map_location='cpu')
     network.load_state_dict(ckpt)
 
     # start evaluation

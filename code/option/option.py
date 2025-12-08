@@ -15,7 +15,7 @@ parser.add_argument('--pre_trained_model', type=str, default='null', help='path 
 parser.add_argument('--save_infer_results', action='store_true', default=False, help='save the infer results during validation')
 opt=parser.parse_args()
 
-opt.val_dataset_dir = os.path.join('../dataset/', opt.dataset, 'test')
+opt.val_dataset_dir = os.path.join('./dataset/', opt.dataset, 'test')
 exp_dataset_dir = os.path.join(opt.exp_dir, opt.dataset)
 exp_model_dir = os.path.join(exp_dataset_dir, opt.model_name)
 
